@@ -2,13 +2,13 @@ from langchain.chains import RetrievalQA, ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
 
 import os
-os.environ["OPENAI_API_KEY"] = "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"
-os.environ["SERPAPI_API_KEY"] = "35da00be6bca50948e03d198fd719ae6603004097bfe8d52abf57bc00975c94f"
+os.environ["OPENAI_API_KEY"] = 
+os.environ["SERPAPI_API_KEY"] = 
 
 
 
 def get_rag_chain(vectorstore):
-    # llm = ChatOpenAI(openai_api_key = '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')
+    # llm = ChatOpenAI(openai_api_key = )
     llm = get_llama()
     rag_pipeline = RetrievalQA.from_chain_type(
     llm=llm, chain_type="stuff",
@@ -19,7 +19,7 @@ def get_rag_chain(vectorstore):
 
 def get_conversation_chain(vectorstore):
     # llm = get_llama()
-    llm = ChatOpenAI(openai_api_key = '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')
+    llm = ChatOpenAI(openai_api_key = )
     # if you wanna use HF models, uncomment this and comment out ChatOpenAI()
     # llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
 
